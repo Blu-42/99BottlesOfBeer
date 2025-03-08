@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1>Lets sing 99 bottles of beer on the wall.
+
+    </h1>
     <p id="startingNumber">
         startingNumber
     </p>
@@ -16,7 +20,9 @@
 
         let startingNumberElement = document.getElementById('startingNumber');
 
-        startingNumberElement.innerText = `There are ${startingNumber} bottles of beer on the wall`;
+        //startingNumberElement.innerText = `You are starting with ${startingNumber} bottles of beer on the wall`;
+
+        startingNumberElement.innerText = `${startingNumber} bottles of beer on the wall.  ${startingNumber} bottles of beer.  You take on down and pass it around...`;
 
         
 
@@ -33,11 +39,11 @@
             startingNumberElement.append(nextPTag[pTagNumber]);
             
             if (startingNumber == 1) {
-                nextPTag[pTagNumber].textContent = `There is now ${startingNumber} bottle of beer on the wall`;
+                nextPTag[pTagNumber].textContent = `${startingNumber} bottle of beer on the wall!  ${startingNumber} bottle of beer on the wall.  ${startingNumber} bottle of beer.  You take on down and pass it around...`;
             } else if (startingNumber == 0) {
-                nextPTag[pTagNumber].textContent = `There are now no bottles of beer on the wall`;
+                nextPTag[pTagNumber].textContent = `No bottles of beer on the wall`;
             } else {
-                nextPTag[pTagNumber].textContent = `There are now ${startingNumber} bottles of beer on the wall`;
+                nextPTag[pTagNumber].textContent = `${startingNumber} bottles of beer on the wall!  ${startingNumber} bottles of beer on the wall.  ${startingNumber} bottles of beer.  You take on down and pass it around...`;
             }
 
             //nextPTag[pTagNumber].textContent = `There are now ${startingNumber} bottles of beer on the wall`;
