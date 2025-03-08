@@ -22,7 +22,7 @@
 
         //startingNumberElement.innerText = `You are starting with ${startingNumber} bottles of beer on the wall`;
 
-        startingNumberElement.innerText = `${startingNumber} bottles of beer on the wall.  ${startingNumber} bottles of beer.  You take on down and pass it around...`;
+        startingNumberElement.innerText = `${startingNumber} bottles of beer on the wall,  ${startingNumber} bottles of beer.  You take one down and pass it around...`;
 
         
 
@@ -39,11 +39,11 @@
             startingNumberElement.append(nextPTag[pTagNumber]);
             
             if (startingNumber == 1) {
-                nextPTag[pTagNumber].textContent = `${startingNumber} bottle of beer on the wall!  ${startingNumber} bottle of beer on the wall.  ${startingNumber} bottle of beer.  You take on down and pass it around...`;
+                nextPTag[pTagNumber].textContent = `${startingNumber} bottle of beer on the wall!  ${startingNumber} bottle of beer on the wall,  ${startingNumber} bottle of beer.  You take one down and pass it around...`;
             } else if (startingNumber == 0) {
                 nextPTag[pTagNumber].textContent = `No bottles of beer on the wall`;
             } else {
-                nextPTag[pTagNumber].textContent = `${startingNumber} bottles of beer on the wall!  ${startingNumber} bottles of beer on the wall.  ${startingNumber} bottles of beer.  You take on down and pass it around...`;
+                nextPTag[pTagNumber].textContent = `${startingNumber} bottles of beer on the wall!  ${startingNumber} bottles of beer on the wall,  ${startingNumber} bottles of beer.  You take one down and pass it around...`;
             }
 
             //nextPTag[pTagNumber].textContent = `There are now ${startingNumber} bottles of beer on the wall`;
