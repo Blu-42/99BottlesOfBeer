@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="startingNumber">
+        startingNumber
+    </p>
+
+
+    <script>
+        let startingNumber = prompt('How many bottles?');
+
+        let startingNumberElement = document.getElementById('startingNumber');
+
+        startingNumberElement.innerText = `There are ${startingNumber} bottles of beer on the wall`;
+
+        
+
+        while (startingNumber > 0) {
+            let nextPTag = []
+            let pTagNumber = 0;
+
+            //console.log('startingNumber', startingNumber);
+            //console.log(typeof startingNumber);
+            startingNumber--;
+
+            nextPTag[pTagNumber] = document.createElement('p');
+
+            startingNumberElement.append(nextPTag[pTagNumber]);
+            
+            if (startingNumber == 1) {
+                nextPTag[pTagNumber].textContent = `There is now ${startingNumber} bottle of beer on the wall`;
+            } else if (startingNumber == 0) {
+                nextPTag[pTagNumber].textContent = `There are now no bottles of beer on the wall`;
+            } else {
+                nextPTag[pTagNumber].textContent = `There are now ${startingNumber} bottles of beer on the wall`;
+            }
+
+            //nextPTag[pTagNumber].textContent = `There are now ${startingNumber} bottles of beer on the wall`;
+            
+            pTagNumber++;
+
+
+        }
+
+/*            startingNumber--;
+
+            nextPTag[pTagNumber] = document.createElement('p');
+
+            startingNumberElement.append(nextPTag[pTagNumber]);
+            nextPTag[pTagNumber].textContent = `There is now ${startingNumber} bottle of beer on the wall`;
+            pTagNumber++;
+
+            startingNumber--;
+
+            nextPTag[pTagNumber] = document.createElement('p');
+
+            startingNumberElement.append(nextPTag[pTagNumber]);
+            nextPTag[pTagNumber].textContent = `There are now no bottles of beer on the wall`;
+            pTagNumber++;
+
+ */
+    </script>
+</body>
+</html>
